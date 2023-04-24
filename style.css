@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
+/* 
+CUBE CSS convention
+    1. Variables
+    2. Global styles
+    3. Composition
+    4. Utilities
+    5. Blocks
+    6. Exceptions
+ */
+
+
+/* 1. Variables */
+
+:root {
+    --desktop-width: 1440px;
+    --mobile-width: 375px;
+    /* primary */
+    --primary-lightred: hsl(0, 100%, 67%);
+    --primary-orangeyellow: hsl(39, 100%, 56%);
+    --primary-greenteal: hsl(166, 100%, 37%);
+    --primary-cobaltblue: hsl(234, 85%, 45%);
+    /* gradients */
+    --gradient-slateblue: hsl(252, 100%, 67%);
+    --gradient-royalblue: hsl(241, 81%, 54%);
+    --gradient-violetblue: hsla(256, 72%, 46%, 1);
+    --gradient-persianblue: hsla(241, 72%, 46%, 0);
+    /* neutral */
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-paleblue: hsl(221, 100%, 96%);
+    --neutral-lightlavender: hsl(241, 100%, 89%);
+    --neutral-darkgrayblue: hsl(224, 30%, 27%);
+}
+
+
+/* 2. Global styles */
+
+body {
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
+}
+
+
+/* 3. Composition */
+
+.flex-flow {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 4. Utilities */
+
+.fixed-width {
+    width: 375px;
+}
+
+.centered {
+    text-align: center;
+}
+
+
+/* 5. Blocks */
+
+
+/* 6. Exceptions */
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+}
+
+@media (min-width:320px) {
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+}
+
+@media (min-width:480px) {
+    /* smartphones, Android phones, landscape iPhone */
+}
+
+@media (min-width:600px) {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+
+@media (min-width:801px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (min-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width:1281px) {
+    /* hi-res laptops and desktops */
+}

@@ -9,13 +9,39 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
     <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-<body>
-
-    Your Result 76 of 100 Great You scored higher than 65% of the people who have taken these tests. Summary Reaction 80 / 100 Memory 92 / 100 Verbal 61 / 100 Visual 72 / 100 Continue
+<body class="flex-flow">
+    <main class="flex-flow">
+        <result-component class="fixed-width">
+            <header>Your Result</header>
+            <main>
+                <p><span>76</span>of 100</p>
+            </main>
+            <footer>
+                <p class="centered"><span>Great</span>You scored higher than 65% of the people who have taken these tests.</p>
+            </footer>
+        </result-component>
+        <summary-component class="fixed-width">
+            <header>
+                <p>Summary</p>
+            </header>
+            <main>
+                <ul>
+                    <!-- icon goes into pseudoclass ::before within li -->
+                    <li>Reaction <span>80 / 100</span></li>
+                    <li>Memory <span>92 / 100</span> </li>
+                    <li>Verbal <span>61 / 100</span> </li>
+                    <li>Visual <span>72 / 100</span> </li>
+                </ul>
+            </main>
+            <footer>
+                <button>Continue</button>
+            </footer>
+        </summary-component>
+    </main>
 
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Dzhangir Bayandarov</a>.
