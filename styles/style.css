@@ -36,6 +36,12 @@ CUBE CSS convention
 
 /* 2. Global styles */
 
+html,
+body,
+main {
+    height: 100%;
+}
+
 body {
     font-size: 18px;
     font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
@@ -44,11 +50,25 @@ body {
 
 /* 3. Composition */
 
-.flex-flow {
+.flex-centered {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+}
+
+.flex-spaced {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
 }
 
 
@@ -58,12 +78,36 @@ body {
     width: 375px;
 }
 
+.full-width {
+    width: 100%;
+}
+
 .centered {
     text-align: center;
 }
 
+.margin-bottom-small {
+    margin-bottom: 1rem;
+}
+
+.margin-bottom-normal {
+    margin-bottom: 2rem;
+}
+
+.padding-side-normal {
+    padding: 0 2rem;
+}
+
+.padding-side-large {
+    padding: 0 3rem;
+}
+
 
 /* 5. Blocks */
+
+button {
+    width: 100%;
+}
 
 
 /* 6. Exceptions */
