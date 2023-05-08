@@ -47,20 +47,43 @@ body {
     font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
 }
 
+.reaction::before {
+    content: url("../assets/images/icon-reaction.svg");
+}
+
+.memory::before {
+    content: url("../assets/images/icon-memory.svg");
+}
+
+.verbal::before {
+    content: url("../assets/images/icon-verbal.svg");
+}
+
+.visual::before {
+    content: url("../assets/images/icon-visual.svg");
+}
+
 
 /* 3. Composition */
+
+.flex-basis {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: baseline
+}
 
 .flex-centered {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
 }
 
 .flex-spaced {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .row {
@@ -71,19 +94,25 @@ body {
     flex-direction: column;
 }
 
+.inline-block {
+    display: inline-block;
+}
+
 
 /* 4. Utilities */
 
-.fixed-width {
+
+/* .fixed-width {
     width: 375px;
-}
+} */
 
 .full-width {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .centered {
     text-align: center;
+    vertical-align: middle;
 }
 
 .margin-bottom-small {
@@ -100,6 +129,26 @@ body {
 
 .padding-side-large {
     padding: 0 3rem;
+}
+
+.padding-side-small {
+    padding: 0 1rem;
+}
+
+.padding-normal {
+    padding: 1rem;
+}
+
+.margin-left-large {
+    margin-left: 3rem;
+}
+
+.gap-normal {
+    gap: 1rem;
+}
+
+.gap-small {
+    gap: 0.75rem;
 }
 
 
@@ -127,6 +176,12 @@ button {
 
 @media (min-width:600px) {
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+
+@media (min-width:750px) {
+    .flex-basis {
+        align-items: center;
+    }
 }
 
 @media (min-width:801px) {

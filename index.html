@@ -15,27 +15,48 @@
 
 <body class="flex-centered row">
     <!-- class = flex-centered row  -->
-    <main class="flex-centered row">
-        <result-component class=" flex-centered column | fixed-width padding-side-normal">
+    <main class="flex-basis row">
+        <result-component class=" flex-centered gap-normal column | padding-normal">
             <header>Your Result</header>
             <main>
-                <p class="flex-centered column "><span>76</span>of 100</p>
+                <p class="flex-centered gap-normal column "><span>76</span>of 100</p>
             </main>
             <footer>
-                <p class="flex-centered column | padding-side-large centered"><span>Great</span>You scored higher than 65% of the people who have taken these tests.</p>
+                <p class="flex-centered gap-normal column | padding-side-large centered"><span>Great</span>You scored higher than 65% of the people who have taken these tests.</p>
             </footer>
         </result-component>
-        <summary-component class="fixed-width">
+        <summary-component class="padding-side-normal">
             <header class="margin-bottom-small">
                 <p>Summary</p>
             </header>
             <main class="margin-bottom-normal">
-                <ul class="flex-centered column | padding-side-normal">
+                <ul class="flex-centered column | gap-small ">
                     <!-- icon goes into pseudoclass ::before within li -->
-                    <li class="flex-spaced | full-width">Reaction <span>80 / 100</span></li>
-                    <li class="flex-spaced | full-width">Memory <span>92 / 100</span> </li>
-                    <li class="flex-spaced | full-width">Verbal <span>61 / 100</span> </li>
-                    <li class="flex-spaced | full-width">Visual <span>72 / 100</span> </li>
+                    <li class="flex-spaced | full-width gap-small padding-normal">
+                        <div class="flex-spaced gap-small reaction centered">
+                            <p class="flex-spaced gap-small | centered">Reaction</p>
+                        </div>
+                        <p class="margin-left-large">80 / 100</p>
+                    </li>
+                    <li class="flex-spaced | full-width  gap-small padding-normal ">
+                        <div class="flex-spaced | gap-small centered | memory">
+                            <p class="flex-spaced | gap-small centered">Reaction</p>
+                        </div>
+                        <p class="margin-left-large">92 / 100</p>
+                    </li>
+                    <li class="flex-spaced | full-width gap-small padding-normal ">
+                        <div class="flex-spaced | gap-small centered | verbal">
+                            <p class="flex-spaced | gap-small centered">Verbal</p>
+                        </div>
+                        <p class="margin-left-large">61 / 100</p>
+                    </li>
+                    <li class="flex-spaced gap-small padding-normal ">
+                        <div class="flex-spaced | gap-small centered | visual">
+                            <p class="flex-spaced | gap-small centered">Visual</p>
+                        </div>
+                        <p class="margin-left-large">72 / 100</p>
+
+                    </li>
                 </ul>
             </main>
             <footer>
@@ -44,8 +65,8 @@
         </summary-component>
     </main>
 
-    <!-- <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Dzhangir Bayandarov</a>.
+    <!-- <div class="attribution ">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge " target="_blank ">Frontend Mentor</a>. Coded by <a href="# ">Dzhangir Bayandarov</a>.
     </div> -->
 </body>
 
