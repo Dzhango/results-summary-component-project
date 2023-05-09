@@ -12,54 +12,61 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
+<!-- TODO
+    2. Finish styling left component(span font, component padding), background
+    3. Style second component
+    4.  Style button
+    5. Fix flexbox on large screens, vertical align(no height?)
+-->
 
-<body class="flex-centered row">
+<body class="flex-row">
     <!-- class = flex-centered row  -->
-    <main class="flex-basis row">
-        <result-component class=" flex-centered gap-normal column | padding-normal">
+    <main class="flex-row ">
+        <result-component class="flex-column | padding-normal">
             <header>Your Result</header>
-            <main>
-                <p class="flex-centered gap-normal column "><span>76</span>of 100</p>
+            <main class="flex-column | score">
+                <p class="large-font">76</p>
+                <p class="small-font">out of 100.</p>
             </main>
-            <footer>
-                <p class="flex-centered gap-normal column | padding-side-large centered"><span>Great</span>You scored higher than 65% of the people who have taken these tests.</p>
+            <footer class="flex-column">
+                <p>Great</p>
+                <p class="fixed-width centered">You scored higher than 65% of the people who have taken these tests.</p>
             </footer>
         </result-component>
-        <summary-component class="padding-side-normal">
-            <header class="margin-bottom-small">
+        <summary-component class="flex-column | padding-normal | flex-exception ">
+            <header class="">
                 <p>Summary</p>
             </header>
-            <main class="margin-bottom-normal">
-                <ul class="flex-centered column | gap-small ">
+            <main class="">
+                <ul class="flex-column | flex-exception-start">
                     <!-- icon goes into pseudoclass ::before within li -->
-                    <li class="flex-spaced | full-width gap-small padding-normal">
+                    <li class="flex-row | padding-normal | flex-exception-between">
                         <div class="flex-spaced gap-small reaction centered">
                             <p class="flex-spaced gap-small | centered">Reaction</p>
                         </div>
                         <p class="margin-left-large">80 / 100</p>
                     </li>
-                    <li class="flex-spaced | full-width  gap-small padding-normal ">
+                    <li class="flex-row | padding-normal | flex-exception-between">
                         <div class="flex-spaced | gap-small centered | memory">
                             <p class="flex-spaced | gap-small centered">Reaction</p>
                         </div>
                         <p class="margin-left-large">92 / 100</p>
                     </li>
-                    <li class="flex-spaced | full-width gap-small padding-normal ">
+                    <li class="flex-row | padding-normal | flex-exception-between">
                         <div class="flex-spaced | gap-small centered | verbal">
                             <p class="flex-spaced | gap-small centered">Verbal</p>
                         </div>
                         <p class="margin-left-large">61 / 100</p>
                     </li>
-                    <li class="flex-spaced gap-small padding-normal ">
+                    <li class="flex-row | padding-normal | flex-exception-between">
                         <div class="flex-spaced | gap-small centered | visual">
                             <p class="flex-spaced | gap-small centered">Visual</p>
                         </div>
                         <p class="margin-left-large">72 / 100</p>
-
                     </li>
                 </ul>
             </main>
-            <footer>
+            <footer class="full-width">
                 <button>Continue</button>
             </footer>
         </summary-component>
