@@ -13,20 +13,21 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <!-- TODO
-    2. Finish styling left component(span font, component padding), background
-    3. Style second component
-    4.  Style button
-    5. Fix flexbox on large screens, vertical align(no height?)
+    1. Create color gradient
+    2. Fix wrap
+    3. Fix flexbox on large screens, vertical align(no height?)
+    4. Add button active state
+    5. Finish Results component text style
 -->
 
 <body class="flex-row">
     <!-- class = flex-centered row  -->
-    <main class="flex-row ">
+    <main class="flex-row">
         <result-component class="flex-column | padding-normal">
             <header>Your Result</header>
             <main class="flex-column | score">
                 <p class="large-font">76</p>
-                <p class="small-font">out of 100.</p>
+                <p class="small-font">out of 100</p>
             </main>
             <footer class="flex-column">
                 <p>Great</p>
@@ -34,40 +35,40 @@
             </footer>
         </result-component>
         <summary-component class="flex-column | padding-normal | flex-exception ">
-            <header class="">
+            <header class="font-color-neutral font-bold ">
                 <p>Summary</p>
             </header>
-            <main class="">
-                <ul class="flex-column | flex-exception-start">
+            <main class="padding-side-normal">
+                <ul class="flex-column | padding-vertical-normal">
                     <!-- icon goes into pseudoclass ::before within li -->
                     <li class="flex-row | padding-normal | flex-exception-between">
                         <div class="flex-spaced gap-small reaction centered">
                             <p class="flex-spaced gap-small | centered">Reaction</p>
                         </div>
-                        <p class="margin-left-large">80 / 100</p>
+                        <p class="font-color-neutral"><span class="font-bold font-color-neutral">80</span> / 100</p>
                     </li>
                     <li class="flex-row | padding-normal | flex-exception-between">
                         <div class="flex-spaced | gap-small centered | memory">
                             <p class="flex-spaced | gap-small centered">Reaction</p>
                         </div>
-                        <p class="margin-left-large">92 / 100</p>
+                        <p class="font-color-neutral"><span class="font-bold font-color-neutral">92</span> / 100</p>
                     </li>
                     <li class="flex-row | padding-normal | flex-exception-between">
                         <div class="flex-spaced | gap-small centered | verbal">
                             <p class="flex-spaced | gap-small centered">Verbal</p>
                         </div>
-                        <p class="margin-left-large">61 / 100</p>
+                        <p class="font-color-neutral"><span class="font-bold font-color-neutral">61</span> / 100</p>
                     </li>
                     <li class="flex-row | padding-normal | flex-exception-between">
                         <div class="flex-spaced | gap-small centered | visual">
                             <p class="flex-spaced | gap-small centered">Visual</p>
                         </div>
-                        <p class="margin-left-large">72 / 100</p>
+                        <p class="font-color-neutral"><span class="font-bold font-color-neutral">72</span> / 100</p>
                     </li>
                 </ul>
             </main>
             <footer class="full-width">
-                <button>Continue</button>
+                <button class="padding-vertical-normal">Continue</button>
             </footer>
         </summary-component>
     </main>

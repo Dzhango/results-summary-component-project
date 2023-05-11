@@ -21,6 +21,10 @@ CUBE CSS convention
     --primary-orangeyellow: hsl(39, 100%, 56%);
     --primary-greenteal: hsl(166, 100%, 37%);
     --primary-cobaltblue: hsl(234, 85%, 45%);
+    --background-lightred: hsla(0, 100%, 67%, 0.05);
+    --background-orangeyellow: hsla(39, 100%, 56%, 0.05);
+    --background-greenteal: hsla(166, 100%, 37%, 0.05);
+    --background-cobaltblue: hsla(234, 85%, 45%, 0.05);
     /* gradients */
     --gradient-slateblue: hsl(252, 100%, 67%);
     --gradient-royalblue: hsl(241, 81%, 54%);
@@ -36,15 +40,16 @@ CUBE CSS convention
 
 /* 2. Global styles */
 
-html,
-body,
-main {
-    /* height: 100%; */
+body+main {
+    width: 100%;
+    flex: 1;
 }
 
 body {
     font-size: 18px;
+    font-weight: 500;
     font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
+    background-color: rgb(241, 241, 241);
 }
 
 .reaction::before {
@@ -72,7 +77,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    gap: 1rem;
+    /* gap: 1rem; */
 }
 
 .flex-column {
@@ -146,6 +151,10 @@ body {
     margin-left: 3rem;
 }
 
+.padding-vertical-normal {
+    padding: 1rem 0;
+}
+
 .gap-normal {
     gap: 1rem;
 }
@@ -162,6 +171,14 @@ body {
     font-size: 0.75rem;
 }
 
+.font-color-neutral {
+    color: var(--neutral-darkgrayblue)
+}
+
+.font-bold {
+    font-weight: 800;
+}
+
 
 /* 5. Blocks */
 
@@ -170,7 +187,19 @@ button {
 }
 
 result-component {
-    flex: 1;
+    background-color: var(--gradient-royalblue);
+    color: var(--neutral-white);
+    /* flex: 1; */
+    /* flex-basis: 375px; */
+    flex-basis: 100%;
+    max-width: 375px;
+}
+
+summary-component {
+    background-color: var(--neutral-white);
+    flex-basis: 100%;
+    max-width: 375px;
+    /* align-items: flex-start; */
 }
 
 result-component footer {
@@ -178,8 +207,13 @@ result-component footer {
     /* text-align: justify; */
 }
 
-summary-component {
-    /* align-items: flex-start; */
+button {
+    /* padding: 1rem; */
+    border-radius: 4rem;
+    border: none;
+    color: var(--neutral-white);
+    font-size: inherit;
+    background-color: var(--neutral-darkgrayblue);
 }
 
 .score {
@@ -194,22 +228,29 @@ summary-component {
 
 ul>* {
     width: 100%;
+    /* opacity: 0.1; */
+    border-radius: 0.5rem;
 }
 
 li:has(.reaction) {
     color: var(--primary-lightred);
+    /* background-color: rgb(0, 0, 0, 0.5); */
+    background-color: var(--background-lightred);
 }
 
 li:has(.memory) {
     color: var(--primary-orangeyellow);
+    background-color: var(--background-orangeyellow);
 }
 
 li:has(.verbal) {
     color: var(--primary-greenteal);
+    background-color: var(--background-greenteal);
 }
 
 li:has(.visual) {
     color: var(--primary-cobaltblue);
+    background-color: var(--background-cobaltblue);
 }
 
 
@@ -244,11 +285,7 @@ li:has(.visual) {
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
 
-@media (min-width:750px) {
-    .flex-row {
-        align-items: center;
-    }
-}
+@media (min-width:750px) {}
 
 @media (min-width:801px) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
