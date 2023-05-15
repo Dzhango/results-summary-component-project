@@ -40,11 +40,6 @@ CUBE CSS convention
 
 /* 2. Global styles */
 
-body+main {
-    width: 100%;
-    flex: 1;
-}
-
 body {
     font-size: 18px;
     font-weight: 500;
@@ -115,7 +110,7 @@ body {
 } */
 
 .full-width {
-    /* width: 100%; */
+    width: 100%;
 }
 
 .centered {
@@ -124,7 +119,7 @@ body {
 }
 
 .margin-bottom-small {
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .margin-bottom-normal {
@@ -141,6 +136,10 @@ body {
 
 .padding-side-small {
     padding: 0 1rem;
+}
+
+.padding-large {
+    padding: 2rem;
 }
 
 .padding-normal {
@@ -167,8 +166,8 @@ body {
     font-size: 3rem;
 }
 
-.small-font {
-    font-size: 0.75rem;
+.medium-font {
+    font-size: 1.5rem;
 }
 
 .font-color-neutral {
@@ -178,6 +177,27 @@ body {
 .font-bold {
     font-weight: 800;
 }
+
+.gap-large {
+    gap: 2rem;
+}
+
+.neutral-background {
+    background-color: var(--neutral-white);
+}
+
+.flex-growth {
+    flex: 1;
+}
+
+.text-opaque {
+    opacity: 0.5;
+}
+
+
+/* .max-width {
+    max-width: 890px;
+} */
 
 
 /* 5. Blocks */
@@ -189,21 +209,22 @@ button {
 result-component {
     background-color: var(--gradient-royalblue);
     color: var(--neutral-white);
-    /* flex: 1; */
-    /* flex-basis: 375px; */
     flex-basis: 100%;
-    max-width: 375px;
+    max-width: 311px;
+    border-radius: 10%;
+    flex-grow: 0;
 }
 
 summary-component {
     background-color: var(--neutral-white);
     flex-basis: 100%;
-    max-width: 375px;
+    flex-grow: 0;
+    max-width: 311px;
     /* align-items: flex-start; */
 }
 
 result-component footer {
-    width: 25ch;
+    max-width: 30ch;
     /* text-align: justify; */
 }
 
@@ -221,7 +242,7 @@ button {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    padding: 20px;
+    padding: 1rem;
     justify-content: center;
     gap: 0.5rem;
 }
@@ -285,9 +306,16 @@ li:has(.visual) {
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
 
-@media (min-width:750px) {}
+@media (min-width:750px) {
+    .flex-row {
+        align-items: normal;
+    }
+}
 
 @media (min-width:801px) {
+    body {
+        /* height: 100vh; */
+    }
     /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
 
