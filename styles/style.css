@@ -28,8 +28,8 @@ CUBE CSS convention
     /* gradients */
     --gradient-slateblue: hsl(252, 100%, 67%);
     --gradient-royalblue: hsl(241, 81%, 54%);
-    --gradient-violetblue: hsla(256, 72%, 46%, 1);
-    --gradient-persianblue: hsla(241, 72%, 46%, 0);
+    --gradient-violetblue: hsla(256, 72%, 46%, 0.25);
+    --gradient-persianblue: hsla(241, 72%, 46%, 1);
     /* neutral */
     --neutral-white: hsl(0, 0%, 100%);
     --neutral-paleblue: hsl(221, 100%, 96%);
@@ -45,6 +45,8 @@ body {
     font-weight: 500;
     font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
     background-color: rgb(241, 241, 241);
+    height: 100vh;
+    /* height: 100vh; */
 }
 
 .reaction::before {
@@ -163,7 +165,7 @@ body {
 }
 
 .large-font {
-    font-size: 3rem;
+    font-size: 4.5rem;
 }
 
 .medium-font {
@@ -194,10 +196,18 @@ body {
     opacity: 0.5;
 }
 
+.border-round {
+    border-radius: 10%;
+}
+
 
 /* .max-width {
     max-width: 890px;
 } */
+
+.max-width {
+    max-width: 750px;
+}
 
 
 /* 5. Blocks */
@@ -207,7 +217,7 @@ button {
 }
 
 result-component {
-    background-color: var(--gradient-royalblue);
+    background-image: linear-gradient(var(--gradient-slateblue), var(--gradient-royalblue));
     color: var(--neutral-white);
     flex-basis: 100%;
     max-width: 311px;
@@ -224,8 +234,18 @@ summary-component {
 }
 
 result-component footer {
-    max-width: 30ch;
+    max-width: 25ch;
+    line-height: 1.5;
     /* text-align: justify; */
+}
+
+button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(var(--gradient-slateblue), var(--gradient-royalblue));
+}
+
+button:active {
+    background-image: none;
 }
 
 button {
@@ -238,11 +258,13 @@ button {
 }
 
 .score {
-    border: 1px solid black;
+    background-image: linear-gradient(var(--gradient-persianblue), var(--gradient-violetblue));
+    /* background-color: var(--gradient-persianblue); */
+    /* border: 0.5px var(--gradient-royalblue); */
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    padding: 1rem;
+    padding: 3rem;
     justify-content: center;
     gap: 0.5rem;
 }
@@ -278,6 +300,7 @@ li:has(.visual) {
 /* 6. Exceptions */
 
 .attribution {
+    color: black;
     position: fixed;
     bottom: 0;
 }
@@ -294,35 +317,19 @@ li:has(.visual) {
     justify-content: space-between;
 }
 
-@media (min-width:320px) {
-    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-}
-
-@media (min-width:480px) {
-    /* smartphones, Android phones, landscape iPhone */
-}
-
-@media (min-width:600px) {
-    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-}
-
-@media (min-width:750px) {
-    .flex-row {
-        align-items: normal;
-    }
-}
-
-@media (min-width:801px) {
+@media (max-width:749px) {
     body {
-        /* height: 100vh; */
+        font-size: 16px;
     }
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-
-@media (min-width:1025px) {
-    /* big landscape tablets, laptops, and desktops */
-}
-
-@media (min-width:1281px) {
-    /* hi-res laptops and desktops */
+    .max-width {
+        max-width: 350px;
+    }
+    result-component {
+        border-radius: 0;
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+    }
+    .flex-row {
+        align-items: flex-start;
+    }
 }
