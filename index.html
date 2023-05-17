@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <!-- TODO
-    1. Create color gradient
     2. Understand justify-self
     3. Fix wrap
     4. Fix flexbox on large screens, vertical align(no height?)
@@ -21,7 +20,6 @@
 -->
 
 <body class="flex-row">
-    <!-- class = flex-centered row  -->
     <main class="flex-row | max-width neutral-background flex-growth border-round ">
         <result-component class="flex-column | padding-large gap-large">
             <header class="text-opaque">Your Result</header>
@@ -30,8 +28,6 @@
                     <p class="large-font font-bold margin-bottom-small">76</p>
                     <p class="text-opaque">of 100</p>
                 </div>
-                <!-- <p class="large-font">76</p>
-                <p class="small-font">of 100</p> -->
             </main>
             <footer class="flex-column | flex-growth">
                 <p class="medium-font font-bold">Great</p>
@@ -42,9 +38,8 @@
             <header class="font-color-neutral font-bold ">
                 <p>Summary</p>
             </header>
-            <main class="">
+            <main>
                 <ul class="flex-column | padding-normal">
-                    <!-- icon goes into pseudoclass ::before within li -->
                     <li class="flex-row | padding-normal | flex-exception-between">
                         <div class="flex-spaced gap-small reaction centered">
                             <p class="flex-spaced gap-small | centered">Reaction</p>
@@ -53,7 +48,7 @@
                     </li>
                     <li class="flex-row | padding-normal | flex-exception-between">
                         <div class="flex-spaced | gap-small centered | memory">
-                            <p class="flex-spaced | gap-small centered">Reaction</p>
+                            <p class="flex-spaced | gap-small centered">Memory</p>
                         </div>
                         <p class="font-color-neutral"><span class="font-bold font-color-neutral">92</span><span class="text-opaque"> / 100<span></p>
                     </li>

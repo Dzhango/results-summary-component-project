@@ -74,7 +74,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    /* gap: 1rem; */
 }
 
 .flex-column {
@@ -105,11 +104,6 @@ body {
 
 
 /* 4. Utilities */
-
-
-/* .fixed-width {
-    width: 375px;
-} */
 
 .full-width {
     width: 100%;
@@ -200,11 +194,6 @@ body {
     border-radius: 10%;
 }
 
-
-/* .max-width {
-    max-width: 890px;
-} */
-
 .max-width {
     max-width: 750px;
 }
@@ -230,13 +219,11 @@ summary-component {
     flex-basis: 100%;
     flex-grow: 0;
     max-width: 311px;
-    /* align-items: flex-start; */
 }
 
 result-component footer {
     max-width: 25ch;
     line-height: 1.5;
-    /* text-align: justify; */
 }
 
 button:hover {
@@ -249,7 +236,6 @@ button:active {
 }
 
 button {
-    /* padding: 1rem; */
     border-radius: 4rem;
     border: none;
     color: var(--neutral-white);
@@ -259,8 +245,6 @@ button {
 
 .score {
     background-image: linear-gradient(var(--gradient-persianblue), var(--gradient-violetblue));
-    /* background-color: var(--gradient-persianblue); */
-    /* border: 0.5px var(--gradient-royalblue); */
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -271,13 +255,11 @@ button {
 
 ul>* {
     width: 100%;
-    /* opacity: 0.1; */
     border-radius: 0.5rem;
 }
 
 li:has(.reaction) {
     color: var(--primary-lightred);
-    /* background-color: rgb(0, 0, 0, 0.5); */
     background-color: var(--background-lightred);
 }
 
@@ -328,8 +310,5 @@ li:has(.visual) {
         border-radius: 0;
         border-bottom-left-radius: 10%;
         border-bottom-right-radius: 10%;
-    }
-    .flex-row {
-        align-items: flex-start;
     }
 }
